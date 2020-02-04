@@ -51,10 +51,15 @@ flutter:
     - assets/logo_header.png
     - assets/dentista.jpg
     - assets/dentista2.jpg
+    - assets/dentista3.png
     - assets/facebook1.png
     - assets/facebook2.png
     - assets/google1.png
     - assets/logo_header_app.png
+    - assets/logo_sitio.png
+    - assets/instagram.png
+    - assets/twitter.png
+    - assets/globo.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

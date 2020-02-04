@@ -3,7 +3,7 @@ import 'package:odontoplus/pages/HomePage.dart';
 import 'package:odontoplus/widgets/buttons/buttonFacebookOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonGoogleOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonPrimary.dart';
-import 'package:odontoplus/widgets/headerLogin.dart';
+import 'package:odontoplus/widgets/headers/headerLogin.dart';
 import 'package:odontoplus/widgets/semcadastroLogin.dart';
 import 'package:odontoplus/widgets/termoscondicoesLogin.dart';
 import 'package:odontoplus/widgets/userpassLogin.dart';

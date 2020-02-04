@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:odontoplus/widgets/drawers/drawerOne.dart';
-import 'package:odontoplus/widgets/textoHeaderApp.dart';
+import 'package:odontoplus/widgets/headers/textoHeaderApp.dart';
 
 class HomePage extends StatelessWidget {
   GlobalKey<ScaffoldState> _keyScaffold = GlobalKey<ScaffoldState>();
