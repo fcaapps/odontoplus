@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odontoplus/pages/HomePage.dart';
 import 'package:odontoplus/pages/LoginPage.dart';
 import 'package:odontoplus/utils/theme.dart';
 
@@ -11,7 +12,7 @@ void main() {
 //    ),
     theme: basicTheme(),
     title: 'OdontoPlus',
-    home: LoginPage(),
+    home: HomePage(),
     debugShowCheckedModeBanner: false,
   ));
 }

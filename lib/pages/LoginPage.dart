@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:odontoplus/pages/HomePage.dart';
 import 'package:odontoplus/widgets/buttons/buttonFacebookOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonGoogleOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonPrimary.dart';
@@ -12,7 +13,10 @@ class LoginPage extends StatefulWidget {
   _LoginPageState createState() => _LoginPageState();
 }
 
+
 class _LoginPageState extends State<LoginPage> {
+  bool isLoading = false;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,9 +35,25 @@ class _LoginPageState extends State<LoginPage> {
                   child: userpassLogin(),
                 ),
                 //Button Entrar
-                Padding(
-                  padding: const EdgeInsets.only(top:350),
-                  child: buttonPrimary(textButton: 'ENTRAR',),
+                Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 350),
+                    child: buttonPrimary(
+                      textButton: 'ENTRAR',
+                      isLoading: isLoading,
+                      widthButao: MediaQuery.of(context).size.width - 60,
+                      validarCampos: () {
+                        setState(() {
+                          isLoading = !isLoading;
+                        });
+                        //Abrindo página HomePage
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                          return HomePage();
+                        }));
+                      },
+                    ),
+                  ),
                 ),
                 //Opção para cadastrar usuário
                 Padding(
@@ -48,20 +68,23 @@ class _LoginPageState extends State<LoginPage> {
                     height: 5,
                     width: 25,
                     decoration: BoxDecoration(
-                      color: Color(0XFFD4D4D4),
-                      borderRadius: BorderRadius.circular(40)
-                    ),
+                        color: Color(0XFFD4D4D4),
+                        borderRadius: BorderRadius.circular(40)),
                   ),
                 ),
                 //Button de Acesso - Facebook
                 Padding(
                   padding: const EdgeInsets.only(top: 460),
-                  child: buttonFacebookOne(textButton: 'Entrar com Facebook',),
+                  child: buttonFacebookOne(
+                    textButton: 'Entrar com Facebook',
+                  ),
                 ),
                 //Button de Acesso - Google
                 Padding(
                   padding: const EdgeInsets.only(top: 520),
-                  child: buttonGoogleOne(textButton: 'Entrar com Google',),
+                  child: buttonGoogleOne(
+                    textButton: 'Entrar com Google',
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 590, left: 20, right: 20),
