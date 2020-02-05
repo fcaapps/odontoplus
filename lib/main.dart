@@ -9,7 +9,7 @@ void main() {
   runApp(MaterialApp(
     theme: basicTheme(),
     title: 'OdontoPlus',
-    home: HomePage(),
+    home: LoginPage(),
     debugShowCheckedModeBanner: false,
   ));
 }

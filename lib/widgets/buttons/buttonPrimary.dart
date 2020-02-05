@@ -39,6 +39,7 @@ class buttonPrimary extends StatelessWidget {
       ),
       onTap: () {
         validarCampos();
+        //Future.delayed(Duration(seconds: 2), () => validarCampos());
       },
     );
   }

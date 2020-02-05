@@ -10,7 +10,7 @@ class _menuInicialState extends State<menuInicial> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 50),
+      margin: EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
           borderRadius: BorderRadius.only(
@@ -47,12 +47,16 @@ class _menuInicialState extends State<menuInicial> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
+                //Serviços
                 Container(
                   height: 130,
                   width: 130,
                   decoration: BoxDecoration(
                       color: Color(0XFF6EDFD7),
                       borderRadius: BorderRadius.circular(30)
+                  ),
+                  child: Column(
+                    children: <Widget>[],
                   ),
                 ),
                 SizedBox(height: 15,),

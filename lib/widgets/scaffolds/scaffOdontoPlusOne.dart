@@ -62,33 +62,6 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
               _pageControl.jumpToPage(index);
             },
           ),
-//      body: CustomScrollView(
-//        slivers: <Widget>[
-//          SliverAppBar(
-//            automaticallyImplyLeading: false,
-//            shape: ContinuousRectangleBorder(
-//                borderRadius: BorderRadius.only(
-//                    bottomLeft: Radius.circular(90),
-//                    bottomRight: Radius.circular(90))),
-//            actions: <Widget>[
-//              IconButton(
-//                  icon: new Icon(Icons.menu),
-//                  onPressed: () {
-//                    _keyScaffold.currentState.openDrawer();
-//                  }),
-//              SliverList(
-//                delegate: SliverChildListDelegate([
-////                PageView(
-////                  physics: NeverScrollableScrollPhysics(),
-////                  controller: _pageControl,
-////                  children: pages,
-////                )
-//                ]),
-//              ),
-//            ],
-//          ),
-//        ],
-//      ),
           appBar: PreferredSize(
             preferredSize: Size.fromHeight(65),
             child: AppBar(
@@ -122,17 +95,9 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
                 //print(notification.scrollDelta);
                 setState(() {
                   posPixelInicialPage = notification.metrics.pixels.truncate();
-                  print(posPixelInicialPage);
                 });
               }),
-//          body: Container(
-//            color: Theme.of(context).primaryColor,
-//          ),
-//          body: PageView(
-//            physics: NeverScrollableScrollPhysics(),
-//            controller: _pageControl,
-//            children: pages,
-//          ),
+
           bottomNavigationBar: bottomNavigationBar,
         ),
       ],
