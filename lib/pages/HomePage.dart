@@ -1,31 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:odontoplus/widgets/drawers/drawerOne.dart';
-import 'package:odontoplus/widgets/headers/textoHeaderApp.dart';
+import 'package:odontoplus/widgets/precisaajudaApp.dart';
+import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusOne.dart';
+import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusTwo.dart';
 
 class HomePage extends StatelessWidget {
-  GlobalKey<ScaffoldState> _keyScaffold = GlobalKey<ScaffoldState>();
+  final Widget precisaAjuda;
+
+  const HomePage({Key key, this.precisaAjuda}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       bottom: true,
       top: true,
-      child: Scaffold(
-        key: _keyScaffold,
-          backgroundColor: Theme
-              .of(context)
-              .backgroundColor,
-          endDrawer: drawerOne(),
-          appBar: AppBar(
-            backgroundColor: Theme.of(context).backgroundColor,
-            iconTheme: IconThemeData(color: Theme
-                .of(context)
-                .primaryColor),
-            elevation: 0,
-            //backgroundColor: Colors.white,
-            //Texto do Header
-            title: textoHeaderApp(),
-            centerTitle: true,
-          )),
+      child: Stack(
+        children: <Widget>[
+          scaffOdontoPlusOne(),
+          Padding(
+            padding: EdgeInsets.only(top: 130, left: MediaQuery.of(context).size.width-100),
+            child: precisaAjuda,
+          )
+        ],
+      )
     );
   }
 }

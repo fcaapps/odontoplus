@@ -4,6 +4,7 @@ import 'package:odontoplus/widgets/buttons/buttonFacebookOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonGoogleOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonPrimary.dart';
 import 'package:odontoplus/widgets/headers/headerLogin.dart';
+import 'package:odontoplus/widgets/precisaajudaApp.dart';
 import 'package:odontoplus/widgets/semcadastroLogin.dart';
 import 'package:odontoplus/widgets/termoscondicoesLogin.dart';
 import 'package:odontoplus/widgets/userpassLogin.dart';
@@ -49,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                         });
                         //Abrindo página HomePage
                         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-                          return HomePage();
+                          return HomePage(precisaAjuda: precisaajudaApp(visivel: true,),);
                         }));
                       },
                     ),
