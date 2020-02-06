@@ -11,8 +11,8 @@ class termoscondicoesLogin extends StatelessWidget {
             text: 'Ao se inscrever, você concorda com nossos ',
             style: TextStyle(
             fontFamily: 'Roboto',
-            fontSize: 9,
-            color: Colors.black45
+            fontSize: 10,
+            color: Color(0XFF707070)
 
           ),
             children: <TextSpan>[
@@ -21,7 +21,7 @@ class termoscondicoesLogin extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: 'Roboto',
                     fontSize: 9,
-                    color: Theme.of(context).primaryColor,
+                    color: Color(0XFF0B46D1),
                     decoration: TextDecoration.underline,
 
                   ),

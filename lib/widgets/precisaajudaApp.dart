@@ -11,22 +11,23 @@ class precisaajudaApp extends StatelessWidget {
       visible: visivel,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(60),
-              bottomLeft: Radius.circular(60)
-          ),
-        ),
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(60), bottomLeft: Radius.circular(60)),
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 6,
+                  offset: Offset(4.0, 6.0))
+            ]),
         child: Container(
-          margin: EdgeInsets.fromLTRB(2,2,0,2),
+          margin: EdgeInsets.fromLTRB(2, 2, 0, 2),
           height: 60,
           width: 200,
           decoration: BoxDecoration(
             color: Color(0XFF24A9A0),
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(60),
-              bottomLeft: Radius.circular(60)
-            ),
+                topLeft: Radius.circular(60), bottomLeft: Radius.circular(60)),
           ),
           alignment: Alignment.center,
           child: Material(
@@ -35,19 +36,15 @@ class precisaajudaApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('Precisa',
+                Text(
+                  'Precisa',
                   style: TextStyle(
-                    fontFamily: 'Raleway',
-                    fontSize: 14,
-                    color: Colors.white
-                  ),
+                      fontFamily: 'Raleway', fontSize: 14, color: Colors.white),
                 ),
-                Text('de Ajuda?',
+                Text(
+                  'de Ajuda?',
                   style: TextStyle(
-                      fontFamily: 'Raleway',
-                      fontSize: 14,
-                      color: Colors.white
-                  ),
+                      fontFamily: 'Raleway', fontSize: 14, color: Colors.white),
                 ),
               ],
             ),

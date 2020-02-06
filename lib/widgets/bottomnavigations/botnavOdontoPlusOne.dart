@@ -10,8 +10,8 @@ class bodyOdontoPlusOne extends StatelessWidget {
 Widget get bottomNavigationBar {
   return ClipRRect(
     borderRadius: BorderRadius.only(
-      topRight: Radius.circular(60),
-      topLeft: Radius.circular(60),
+      topRight: Radius.circular(48),
+      topLeft: Radius.circular(48),
     ),
     child: BottomNavigationBar(
       showSelectedLabels: false,

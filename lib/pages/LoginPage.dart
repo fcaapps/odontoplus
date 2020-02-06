@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 //Button de Acesso - Google
                 Padding(
-                  padding: const EdgeInsets.only(top: 520),
+                  padding: const EdgeInsets.only(top: 510),
                   child: buttonGoogleOne(
                     textButton: 'Entrar com Google',
                   ),

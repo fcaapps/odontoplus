@@ -26,13 +26,13 @@ ThemeData basicTheme() {
 
         display1: base.headline.copyWith(
           fontFamily: 'Roboto',
-          fontSize: 18.0,
+          fontSize: 14.0,
           fontWeight: FontWeight.bold,
           color: Colors.black26,
         ),
         display2: base.headline.copyWith(
           fontFamily: 'Roboto',
-          fontSize: 18.0,
+          fontSize: 14.0,
           fontWeight: FontWeight.bold,
           color: Colors.black54,
         ),
@@ -56,7 +56,7 @@ ThemeData basicTheme() {
         ),
         button: base.headline.copyWith(
           fontFamily: 'Roboto',
-          fontSize: 14.0,
+          fontSize: 18.0,
           color: Colors.white,
         ),
 
@@ -67,7 +67,7 @@ ThemeData basicTheme() {
   return base.copyWith(
       textTheme: _basicTextTheme(base.textTheme),
       //textTheme: Typography().white,
-      primaryColor: Color(0XFF009B90),
+      primaryColor: Color(0XFF4AD7CD),
       //primaryColor: Color(0xff4829b2),
       indicatorColor: Color(0xFF807A6B),
       scaffoldBackgroundColor: Color(0xFFF5F5F5),

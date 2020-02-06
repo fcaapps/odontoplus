@@ -5,13 +5,14 @@ class rodapeSitioOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 30),
+      //margin: EdgeInsets.only(right: 10),
       height: 400,
       color: Color(0XFFD4D4D4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Image.asset(
-            "assets/logo_sitio.png",
+            "assets/images/logo_sitio.png",
             height: 100,
             width: 100,
           ),
@@ -27,37 +28,42 @@ class rodapeSitioOne extends StatelessWidget {
                     Text(
                       'SOBRE',
                       style: TextStyle(
-                          fontFamily: 'Raleway',
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold),
+                          fontFamily: 'Roboto',
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)
+                      ),
                     ),
                     SizedBox(height: 40),
                     Text(
                       'AJUDA',
                       style: TextStyle(
-                          fontFamily: 'Raleway',
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold),
+                          fontFamily: 'Roboto',
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)),
                     ),
                     SizedBox(height: 40),
                     Text(
                       'TERMOS',
                       style: TextStyle(
-                          fontFamily: 'Raleway',
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold),
+                          fontFamily: 'Roboto',
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)),
                     ),
                     SizedBox(height: 40),
                     Text(
                       'GUIAS',
                       style: TextStyle(
-                          fontFamily: 'Raleway',
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold),
+                          fontFamily: 'Roboto',
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)),
                     )
                   ],
                 ),
-                SizedBox(width: 80),
+                SizedBox(width: 60),
                 //Coluna 2
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,28 +72,36 @@ class rodapeSitioOne extends StatelessWidget {
                       'DEPOIMENTOS',
                       style: TextStyle(
                           fontFamily: 'Roboto',
-                          fontSize: 15,),
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)),
                     ),
                     SizedBox(height: 40),
                     Text(
                       'ANUNCIAR',
                       style: TextStyle(
                           fontFamily: 'Roboto',
-                          fontSize: 15,),
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)),
                     ),
                     SizedBox(height: 40),
                     Text(
                       'INTEGRAÇÕES',
                       style: TextStyle(
                           fontFamily: 'Roboto',
-                          fontSize: 15,),
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)),
                     ),
                     SizedBox(height: 40),
                     Text(
                       'CARREIRAS',
                       style: TextStyle(
                           fontFamily: 'Roboto',
-                          fontSize: 15,),
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0XFF707070)),
                     )
                   ],
                 ),
@@ -101,10 +115,10 @@ class rodapeSitioOne extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Image.asset("assets/instagram.png", height: 25, width: 25, color: Colors.white,),
-                Image.asset("assets/twitter.png", height: 25, width: 25, color: Colors.white,),
-                Image.asset("assets/facebook1.png", height: 25, width: 25, color: Colors.white,),
-                Image.asset("assets/globo.png", height: 25, width: 25, color: Colors.white,),
+                Image.asset("assets/icons/instagram.png", height: 25, width: 25, color: Colors.white,),
+                Image.asset("assets/icons/twitter.png", height: 25, width: 25, color: Colors.white,),
+                Image.asset("assets/icons/facebook1.png", height: 25, width: 25, color: Colors.white,),
+                Image.asset("assets/icons/globo.png", height: 25, width: 25, color: Colors.white,),
               ],
             ),
           )

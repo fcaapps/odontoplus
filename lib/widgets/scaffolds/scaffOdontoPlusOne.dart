@@ -43,8 +43,8 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     return Stack(
       children: <Widget>[
         Container(
-          height: MediaQuery.of(context).size.height / 8,
-          color: posPixelInicialPage < 110
+          height: MediaQuery.of(context).size.height / 4,
+          color: posPixelInicialPage < 85
               ? Theme.of(context).backgroundColor
               : Theme.of(context).primaryColor,
         ),
@@ -95,6 +95,7 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
                 //print(notification.scrollDelta);
                 setState(() {
                   posPixelInicialPage = notification.metrics.pixels.truncate();
+                  //print(notification.metrics.pixels);
                 });
               }),
 

@@ -8,7 +8,7 @@ class buttonFacebookOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 40),
-      height: 50,
+      height: 42,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Color(0XFF475993),
@@ -20,7 +20,7 @@ class buttonFacebookOne extends StatelessWidget {
         children: <Widget>[
           Expanded(
             flex: 1,
-            child: Image.asset("assets/facebook1.png", height: 30, width: 30, color: Colors.white,),
+            child: Image.asset("assets/icons/facebook1.png", height: 22, width: 22, color: Colors.white,),
           ),
           Expanded(
             flex: 2,

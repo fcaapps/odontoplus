@@ -11,7 +11,7 @@ class headerMenuOdontoPlus extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Image.asset(
-            "assets/logo_header.png",
+            "assets/images/logo_header.png",
             fit: BoxFit.cover,
             height: 40,
             width: 40,

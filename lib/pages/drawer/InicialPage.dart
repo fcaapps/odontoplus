@@ -6,8 +6,9 @@ class InicialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
         child: Container(
-      color: Theme.of(context).backgroundColor,
-      child: SingleChildScrollView(child: menuInicial())
-    ));
+            color: Theme.of(context).backgroundColor,
+            child: SingleChildScrollView(
+              child: menuInicial(),
+            )));
   }
 }

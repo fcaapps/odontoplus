@@ -23,7 +23,7 @@ class buttonPrimary extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(isLoading ? 50 : 50),
             color: Color(0XFFEC5981)),
-        height: 50,
+        height: 42,
         width: isLoading ? 50 : widthButao,
         alignment: Alignment.center,
         child: isLoading

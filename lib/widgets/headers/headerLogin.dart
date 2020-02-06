@@ -10,7 +10,7 @@ class headerLogin extends StatelessWidget {
           height: 180,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/dentista.jpg"),
+                image: AssetImage("assets/images/dentista.jpg"),
                 fit: BoxFit.cover,
             ),
             color: Theme.of(context).primaryColor,
@@ -33,7 +33,7 @@ class headerLogin extends StatelessWidget {
               ),
             ),
             alignment: Alignment.center,
-            child: Image.asset("assets/logo_header.png", fit: BoxFit.cover, height: 68, width: 68,),
+            child: Image.asset("assets/images/logo_header.png", fit: BoxFit.cover, height: 68, width: 68,),
           ),
         ),
       ],

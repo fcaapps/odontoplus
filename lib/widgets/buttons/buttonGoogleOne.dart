@@ -8,10 +8,10 @@ class buttonGoogleOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.symmetric(horizontal: 40),
-        height: 50,
+        height: 42,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: Colors.grey[200],
           borderRadius: BorderRadius.circular(50),
         ),
         alignment: Alignment.center,
@@ -20,8 +20,9 @@ class buttonGoogleOne extends StatelessWidget {
           children: <Widget>[
             Expanded(
               flex: 1,
-              child: Image.asset("assets/google1.png", height: 30, width: 30,),
+              child: Image.asset("assets/icons/google1.png", height: 22, width: 22,),
             ),
+            SizedBox(width: 10,),
             Expanded(
               flex: 2,
               child: Align(
