@@ -19,7 +19,7 @@ class headerMenuOdontoPlus extends StatelessWidget {
           SizedBox(
             width: 5,
           ),
-          textoHeaderApp()
+          textoHeaderApp(corTextoOdonto: Theme.of(context).primaryColor,)
         ],
       ),
     );

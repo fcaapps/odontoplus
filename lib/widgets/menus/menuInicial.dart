@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:odontoplus/main.dart';
 import 'package:odontoplus/pages/home/Servicos.dart';
 import 'package:odontoplus/widgets/buttons/buttonMenuInicialOne.dart';
+import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusOne.dart';
 
 class menuInicial extends StatefulWidget {
   @override
@@ -12,16 +13,6 @@ class menuInicial extends StatefulWidget {
 class _menuInicialState extends State<menuInicial> {
   @override
   Widget build(BuildContext context) {
-//    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-//      statusBarColor: Theme
-//          .of(context)
-//          .backgroundColor, //top bar color
-//      statusBarIconBrightness: Brightness.dark, //top bar icons
-//      systemNavigationBarColor: Theme
-//          .of(context)
-//          .backgroundColor, //bottom bar color
-//      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
-//    ));
     return Container(
       margin: EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
@@ -69,16 +60,8 @@ class _menuInicialState extends State<menuInicial> {
                   textoButton: 'Serviços',
                   onTap: () {
                     //Abrindo Tela de Serviços
-                    setState(() {
-                      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-                        statusBarColor: Theme.of(context).primaryColor, //top bar color
-                        statusBarIconBrightness: Brightness.dark, //top bar icons
-                        systemNavigationBarColor: Theme.of(context).primaryColor, //bottom bar color
-                        systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
-                      ));
-                    });
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return Servicos();
+                      return scaffOdontoPlusOne(pageDefault: 5,);
                     }));
                   },
                 ),

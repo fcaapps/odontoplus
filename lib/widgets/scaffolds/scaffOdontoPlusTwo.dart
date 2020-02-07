@@ -27,6 +27,7 @@ class scaffOdontoPlusTwo extends StatefulWidget {
 class _scaffOdontoPlusTwoState extends State<scaffOdontoPlusTwo> {
   GlobalKey<ScaffoldState> _keyScaffold = GlobalKey<ScaffoldState>();
   int posPixelInicialPage = 0;
+  int indexPage = 0;
 
   var pages = <Widget>[
     InicialPage(),
@@ -48,17 +49,17 @@ class _scaffOdontoPlusTwoState extends State<scaffOdontoPlusTwo> {
 
   @override
   Widget build(BuildContext context) {
-//    setState(() {
-//      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-//        statusBarColor: Theme.of(context).primaryColor, //top bar color
-//        statusBarIconBrightness: Brightness.dark, //top bar icons
-//        systemNavigationBarColor: Theme.of(context).primaryColor, //bottom bar color
-//        systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
-//      ));
-//    });
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Theme.of(context).primaryColor, //top bar color
-    ));
+    setState(() {
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarColor: Theme.of(context).primaryColor, //top bar color
+        statusBarIconBrightness: Brightness.dark, //top bar icons
+        systemNavigationBarColor: Theme.of(context).primaryColor, //bottom bar color
+        systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+      ));
+    });
+//    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+//      statusBarColor: Theme.of(context).primaryColor, //top bar color
+//    ));
     return Stack(
       children: <Widget>[
         Container(
@@ -77,8 +78,9 @@ class _scaffOdontoPlusTwoState extends State<scaffOdontoPlusTwo> {
           backgroundColor: Colors.transparent,
           drawer: drawerOne(
             onPressed: (index) {
-              _keyScaffold.currentState.openEndDrawer();
+               _keyScaffold.currentState.openEndDrawer();
               _pageControl.jumpToPage(index);
+//               Navigator.of(context).pop();
             },
           ),
           appBar: PreferredSize(
@@ -87,7 +89,7 @@ class _scaffOdontoPlusTwoState extends State<scaffOdontoPlusTwo> {
               leading: IconButton(
                 onPressed: () {
                   print("Teste");
-                  Navigator.pop(context, true);
+                  Navigator.of(context).pop();
                   setState(() {
                     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
                       statusBarColor: Theme.of(context).backgroundColor, //top bar color
@@ -105,13 +107,15 @@ class _scaffOdontoPlusTwoState extends State<scaffOdontoPlusTwo> {
               ),
               shape: ContinuousRectangleBorder(
                   borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(100),
-                      bottomRight: Radius.circular(100))),
+                      bottomLeft: Radius.circular(70),
+                      bottomRight: Radius.circular(70))),
               actions: <Widget>[
                 IconButton(
                     icon: new Icon(Icons.menu),
                     onPressed: () {
                       _keyScaffold.currentState.openDrawer();
+//                      _pageControl.jumpToPage(index);
+                      //Navigator.of(context).pop();
                     }),
               ],
               iconTheme:
@@ -125,7 +129,11 @@ class _scaffOdontoPlusTwoState extends State<scaffOdontoPlusTwo> {
             ),
           ),
           body: NotificationListener<ScrollUpdateNotification>(
-              child: _paginaChamada(),
+              child: PageView(
+                physics: NeverScrollableScrollPhysics(),
+                controller: _pageControl,
+                children: pages,
+              ),
               onNotification: (notification) {
                 //print(notification.scrollDelta);
                 setState(() {

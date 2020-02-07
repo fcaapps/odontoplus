@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         top: true,
         child: Stack(
           children: <Widget>[
-            scaffOdontoPlusOne(),
+            scaffOdontoPlusOne(pageDefault: 0,),
             Padding(
               padding: EdgeInsets.only(
                   top: 130, left: MediaQuery.of(context).size.width - 100),

@@ -11,7 +11,6 @@ class _ListaOdontoPlusServicosState extends State<ListaOdontoPlusServicos> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 8),
       height: double.infinity,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -19,7 +18,7 @@ class _ListaOdontoPlusServicosState extends State<ListaOdontoPlusServicos> {
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(60), topRight: Radius.circular(60))),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: ListView(
           children: <Widget>[
             Container(
