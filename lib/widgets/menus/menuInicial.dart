@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:odontoplus/main.dart';
+import 'package:odontoplus/pages/home/Servicos.dart';
 import 'package:odontoplus/widgets/buttons/buttonMenuInicialOne.dart';
 
 class menuInicial extends StatefulWidget {
@@ -10,6 +12,16 @@ class menuInicial extends StatefulWidget {
 class _menuInicialState extends State<menuInicial> {
   @override
   Widget build(BuildContext context) {
+//    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+//      statusBarColor: Theme
+//          .of(context)
+//          .backgroundColor, //top bar color
+//      statusBarIconBrightness: Brightness.dark, //top bar icons
+//      systemNavigationBarColor: Theme
+//          .of(context)
+//          .backgroundColor, //bottom bar color
+//      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+//    ));
     return Container(
       margin: EdgeInsets.only(top: 30),
       decoration: BoxDecoration(
@@ -55,7 +67,20 @@ class _menuInicialState extends State<menuInicial> {
                     color: Color(0XFF24A9A0),
                   ),
                   textoButton: 'Serviços',
-                  onTap: () { print("Serviços"); },
+                  onTap: () {
+                    //Abrindo Tela de Serviços
+                    setState(() {
+                      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+                        statusBarColor: Theme.of(context).primaryColor, //top bar color
+                        statusBarIconBrightness: Brightness.dark, //top bar icons
+                        systemNavigationBarColor: Theme.of(context).primaryColor, //bottom bar color
+                        systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+                      ));
+                    });
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Servicos();
+                    }));
+                  },
                 ),
                 SizedBox(
                   height: 15,

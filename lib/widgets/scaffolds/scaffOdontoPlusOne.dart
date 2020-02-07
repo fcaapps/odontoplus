@@ -35,11 +35,16 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.white, //top bar color
+      statusBarColor: Theme
+          .of(context)
+          .backgroundColor, //top bar color
       statusBarIconBrightness: Brightness.dark, //top bar icons
-      systemNavigationBarColor: Colors.white, //bottom bar color
+      systemNavigationBarColor: Theme
+          .of(context)
+          .backgroundColor, //bottom bar color
       systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
     ));
+
     return Stack(
       children: <Widget>[
         Container(
@@ -83,6 +88,7 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
               //Texto do Header
               title: textoHeaderApp(),
               centerTitle: true,
+              //brightness: Brightness.dark,
             ),
           ),
           body: NotificationListener<ScrollUpdateNotification>(
@@ -94,11 +100,11 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
               onNotification: (notification) {
                 //print(notification.scrollDelta);
                 setState(() {
-                  posPixelInicialPage = notification.metrics.pixels.truncate();
+                  posPixelInicialPage =
+                      notification.metrics.pixels.truncate();
                   //print(notification.metrics.pixels);
                 });
               }),
-
           bottomNavigationBar: bottomNavigationBar,
         ),
       ],

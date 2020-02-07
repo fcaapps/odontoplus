@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:odontoplus/pages/HomePage.dart';
 import 'package:odontoplus/widgets/buttons/buttonFacebookOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonGoogleOne.dart';
@@ -14,12 +15,17 @@ class LoginPage extends StatefulWidget {
   _LoginPageState createState() => _LoginPageState();
 }
 
-
 class _LoginPageState extends State<LoginPage> {
   bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarColor: Theme.of(context).backgroundColor, //top bar color
+        statusBarIconBrightness: Brightness.dark, //top bar icons
+        systemNavigationBarColor: Theme.of(context).backgroundColor, //bottom bar color
+        systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+      ));
     return SafeArea(
         bottom: true,
         top: true,
@@ -49,8 +55,34 @@ class _LoginPageState extends State<LoginPage> {
                           isLoading = !isLoading;
                         });
                         //Abrindo página HomePage
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-                          return HomePage(precisaAjuda: precisaajudaApp(visivel: true,),);
+                        setState(() {
+                          SystemChrome.setSystemUIOverlayStyle(
+                              SystemUiOverlayStyle(
+                                systemNavigationBarColor: Theme.of(context)
+                                    .backgroundColor, //top bar color
+                              ));
+                        });
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) {
+//                          setState(() {
+//                            SystemChrome.setSystemUIOverlayStyle(
+//                                SystemUiOverlayStyle(
+//                                  statusBarColor: Theme.of(context).backgroundColor,
+//                                  //top bar color
+//                                  statusBarIconBrightness: Brightness.dark,
+//                                  //top bar icons
+//                                  systemNavigationBarColor:
+//                                  Theme.of(context).backgroundColor,
+//                                  //bottom bar color
+//                                  systemNavigationBarIconBrightness:
+//                                  Brightness.dark, //bottom bar icons
+//                                ));
+//                          });
+
+                          return HomePage(
+                              precisaAjuda: precisaajudaApp(
+                            visivel: true,
+                          ));
                         }));
                       },
                     ),

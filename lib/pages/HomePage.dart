@@ -1,26 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:odontoplus/widgets/precisaajudaApp.dart';
 import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusOne.dart';
 import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusTwo.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   final Widget precisaAjuda;
 
   const HomePage({Key key, this.precisaAjuda}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+//    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+//      statusBarColor: Theme.of(context).backgroundColor, //top bar color
+//      statusBarIconBrightness: Brightness.dark, //top bar icons
+//      systemNavigationBarColor:
+//          Theme.of(context).backgroundColor, //bottom bar color
+//      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+//    ));
+//    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+//      statusBarColor: Theme.of(context).backgroundColor, //top bar color
+//    ));
     return SafeArea(
-      bottom: true,
-      top: true,
-      child: Stack(
-        children: <Widget>[
-          scaffOdontoPlusOne(),
-          Padding(
-            padding: EdgeInsets.only(top: 130, left: MediaQuery.of(context).size.width-100),
-            child: precisaAjuda,
-          )
-        ],
-      )
-    );
+        bottom: true,
+        top: true,
+        child: Stack(
+          children: <Widget>[
+            scaffOdontoPlusOne(),
+            Padding(
+              padding: EdgeInsets.only(
+                  top: 130, left: MediaQuery.of(context).size.width - 100),
+              child: this.widget.precisaAjuda,
+            )
+          ],
+        ));
   }
 }
