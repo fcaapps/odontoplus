@@ -25,6 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_launcher_icons: ^0.7.4
   scoped_model: ^1.0.1
+  table_calendar: ^2.2.2
+  calendar_strip: 1.0.0
+  flutter_calendar_carousel: ^1.4.10
 
 dev_dependencies:
   flutter_test:

@@ -61,7 +61,7 @@ class _menuInicialState extends State<menuInicial> {
                   onTap: () {
                     //Abrindo Tela de Serviços
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return scaffOdontoPlusOne(pageDefault: 5,);
+                      return scaffOdontoPlusOne(pageDefault: 5, ehVisivel: false,);
                     }));
                   },
                 ),
@@ -77,7 +77,12 @@ class _menuInicialState extends State<menuInicial> {
                     color: Color(0XFF24A9A0),
                   ),
                   textoButton: 'Agendamentos',
-                  onTap: () {},
+                  onTap: () {
+                    //Abrindo Tela de Agendamento
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return scaffOdontoPlusOne(pageDefault: 6, ehVisivel: false,);
+                    }));
+                  },
                 ),
               ],
             ),
