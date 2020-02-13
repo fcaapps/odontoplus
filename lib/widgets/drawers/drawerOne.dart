@@ -20,15 +20,18 @@ class _drawerOneState extends State<drawerOne> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        children: <Widget>[
-          headerMenuOdontoPlus(),
-          menuDrawer(onPressed: (index) {
-            this.widget.onPressed(index);
-          },),
-          SizedBox(height: 40),
-          rodapeSitioOne()
-        ],
+      child: Container(
+        color: Colors.white,
+        child: ListView(
+          children: <Widget>[
+            headerMenuOdontoPlus(),
+            menuDrawer(onPressed: (index) {
+              this.widget.onPressed(index);
+            },),
+            SizedBox(height: 40),
+            rodapeSitioOne()
+          ],
+        ),
       ),
     );
   }

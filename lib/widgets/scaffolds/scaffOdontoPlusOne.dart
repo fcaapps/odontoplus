@@ -7,6 +7,8 @@ import 'package:odontoplus/pages/drawer/ConfigPage.dart';
 import 'package:odontoplus/pages/drawer/ContatosPage.dart';
 import 'package:odontoplus/pages/drawer/PerfilPage.dart';
 import 'package:odontoplus/pages/home/Agendamento.dart';
+import 'package:odontoplus/pages/home/Contato.dart';
+import 'package:odontoplus/pages/home/Historico.dart';
 import 'package:odontoplus/pages/home/Servicos.dart';
 import 'package:odontoplus/widgets/bottomnavigations/botnavOdontoPlusOne.dart';
 import 'package:odontoplus/widgets/drawers/drawerOne.dart';
@@ -37,7 +39,9 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     ContatosPage(),
     PerfilPage(),
     Servicos(),
-    Agendamento()
+    Agendamento(),
+    Contato(),
+    Historico()
   ];
 
   //Define cor fixa background appBar
@@ -45,6 +49,10 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     if (this.widget.pageDefault == 5) {
       return Theme.of(context).primaryColor;
     } else if (this.widget.pageDefault == 6) {
+      return Theme.of(context).primaryColor;
+    } else if (this.widget.pageDefault == 7) {
+      return Theme.of(context).primaryColor;
+    } else if (this.widget.pageDefault == 8) {
       return Theme.of(context).primaryColor;
     } else if (this.widget.pageDefault == null) {
       return Theme.of(context).backgroundColor;
@@ -56,11 +64,15 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
   //Define cor fixa background buttonNavigationBar
   Color _corNavigationBar() {
     if (this.widget.pageDefault == 5) {
-      return Theme.of(context).primaryColor;
+      return Theme.of(context).backgroundColor;
     } else if (this.widget.pageDefault == 6) {
       return Theme.of(context).primaryColor;
-    } else {
+    } else if (this.widget.pageDefault == 7) {
       return Theme.of(context).backgroundColor;
+    } else if (this.widget.pageDefault == 8) {
+      return Theme.of(context).backgroundColor;
+    } else {
+      return Theme.of(context).primaryColor;
     }
   }
 
@@ -69,6 +81,10 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     if (this.widget.pageDefault == 5) {
       return Theme.of(context).backgroundColor;
     } else if (this.widget.pageDefault == 6) {
+      return Theme.of(context).backgroundColor;
+    } else if (this.widget.pageDefault == 7) {
+      return Theme.of(context).backgroundColor;
+    } else if (this.widget.pageDefault == 8) {
       return Theme.of(context).backgroundColor;
     } else {
       return Theme.of(context).primaryColor;
@@ -83,6 +99,14 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
           : Theme.of(context).backgroundColor;
     } else if (this.widget.pageDefault == 6) {
       return Theme.of(context).primaryColor;
+    } else if (this.widget.pageDefault == 7) {
+      return posPixelInicialPage < 205
+          ? Theme.of(context).primaryColor
+          : Theme.of(context).backgroundColor;
+    } else if (this.widget.pageDefault == 8) {
+      return posPixelInicialPage < 85
+          ? Theme.of(context).primaryColor
+          : Theme.of(context).backgroundColor;
     } else {
       return posPixelInicialPage < 85
           ? Theme.of(context).backgroundColor
@@ -97,11 +121,11 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
         onPressed: () {
           SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
             statusBarColor: Theme.of(context).backgroundColor, //top bar color
-            statusBarIconBrightness: Brightness.dark, //top bar icons
+            //statusBarIconBrightness: Brightness.dark, //top bar icons
             systemNavigationBarColor:
                 Theme.of(context).backgroundColor, //bottom bar color
-            systemNavigationBarIconBrightness:
-                Brightness.dark, //bottom bar icons
+//            systemNavigationBarIconBrightness:
+//                Brightness.dark, //bottom bar icons
           ));
           Navigator.of(context).pop();
           //Navigator.of(context).pop();
@@ -113,11 +137,43 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
         onPressed: () {
           SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
             statusBarColor: Theme.of(context).backgroundColor, //top bar color
-            statusBarIconBrightness: Brightness.dark, //top bar icons
+            //statusBarIconBrightness: Brightness.dark, //top bar icons
             systemNavigationBarColor:
                 Theme.of(context).backgroundColor, //bottom bar color
-            systemNavigationBarIconBrightness:
-                Brightness.dark, //bottom bar icons
+//            systemNavigationBarIconBrightness:
+//                Brightness.dark, //bottom bar icons
+          ));
+          Navigator.of(context).pop();
+          //Navigator.of(context).pop();
+        },
+        icon: Icon(Icons.arrow_back),
+      );
+    } else if (this.widget.pageDefault == 7) {
+      return IconButton(
+        onPressed: () {
+          SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+            statusBarColor: Theme.of(context).backgroundColor, //top bar color
+            //statusBarIconBrightness: Brightness.dark, //top bar icons
+            systemNavigationBarColor:
+            Theme.of(context).backgroundColor, //bottom bar color
+//            systemNavigationBarIconBrightness:
+//            Brightness.dark, //bottom bar icons
+          ));
+          Navigator.of(context).pop();
+          //Navigator.of(context).pop();
+        },
+        icon: Icon(Icons.arrow_back),
+      );
+    } else if (this.widget.pageDefault == 8) {
+      return IconButton(
+        onPressed: () {
+          SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+            statusBarColor: Theme.of(context).backgroundColor, //top bar color
+            //statusBarIconBrightness: Brightness.dark, //top bar icons
+            systemNavigationBarColor:
+            Theme.of(context).backgroundColor, //bottom bar color
+//            systemNavigationBarIconBrightness:
+//            Brightness.dark, //bottom bar icons
           ));
           Navigator.of(context).pop();
           //Navigator.of(context).pop();
@@ -134,6 +190,10 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
       return PageController(initialPage: 5);
     } else if (this.widget.pageDefault == 6) {
       return PageController(initialPage: 6);
+    } else if (this.widget.pageDefault == 7) {
+      return PageController(initialPage: 7);
+    } else if (this.widget.pageDefault == 8) {
+      return PageController(initialPage: 8);
     } else {
       return PageController(initialPage: 0);
     }
@@ -147,13 +207,13 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
 
     print("Index: " + this.widget.pageDefault.toString());
 
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Theme.of(context).backgroundColor, //top bar color
-      statusBarIconBrightness: Brightness.dark, //top bar icons
-      systemNavigationBarColor:
-          Theme.of(context).backgroundColor, //bottom bar color
-      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
-    ));
+//    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+//      statusBarColor: Theme.of(context).backgroundColor, //top bar color
+//      statusBarIconBrightness: Brightness.dark, //top bar icons
+//      systemNavigationBarColor:
+//          Theme.of(context).backgroundColor, //bottom bar color
+//      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+//    ));
 
 
     return Stack(
@@ -172,8 +232,6 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
           drawer: drawerOne(
             onPressed: (index) {
               _keyScaffold.currentState.openEndDrawer();
-
-
               _pageControl.jumpToPage(index);
             },
           ),
@@ -217,7 +275,7 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
                 //print(notification.scrollDelta);
                 setState(() {
                   posPixelInicialPage = notification.metrics.pixels.truncate();
-                  //print(notification.metrics.pixels);
+                  print(notification.metrics.pixels);
                 });
               }),
           bottomNavigationBar: bottomNavigationBar,

@@ -102,7 +102,12 @@ class _menuInicialState extends State<menuInicial> {
                     color: Color(0XFF24A9A0),
                   ),
                   textoButton: 'Contato',
-                  onTap: () {},
+                  onTap: () {
+                    //Abrindo Tela de Contato
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return scaffOdontoPlusOne(pageDefault: 7, ehVisivel: false,);
+                    }));
+                  },
                 ),
                 SizedBox(
                   height: 15,
@@ -116,7 +121,12 @@ class _menuInicialState extends State<menuInicial> {
                     color: Color(0XFF24A9A0),
                   ),
                   textoButton: 'Histórico',
-                  onTap: () {},
+                  onTap: () {
+                    //Abrindo Tela de Histórico
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return scaffOdontoPlusOne(pageDefault: 8, ehVisivel: false,);
+                    }));
+                  },
                 ),
               ],
             ),

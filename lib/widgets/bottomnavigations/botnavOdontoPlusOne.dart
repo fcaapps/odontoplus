@@ -14,6 +14,7 @@ Widget get bottomNavigationBar {
       topLeft: Radius.circular(48),
     ),
     child: BottomNavigationBar(
+      backgroundColor: Colors.white,
       showSelectedLabels: false,
       showUnselectedLabels: false,
       unselectedItemColor: Colors.grey,

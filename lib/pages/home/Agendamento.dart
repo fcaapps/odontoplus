@@ -30,7 +30,7 @@ class _AgendamentoState extends State<Agendamento> {
       statusBarIconBrightness: Brightness.dark, //top bar icons
       systemNavigationBarColor: Theme
           .of(context)
-          .primaryColor, //bottom bar color
+          .backgroundColor, //bottom bar color
       systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
     ));
     return Container(

@@ -15,11 +15,11 @@ class _ServicosState extends State<Servicos> {
       statusBarColor: Theme
           .of(context)
           .primaryColor, //top bar color
-      statusBarIconBrightness: Brightness.dark, //top bar icons
+      //statusBarIconBrightness: Brightness.dark, //top bar icons
       systemNavigationBarColor: Theme
           .of(context)
-          .primaryColor, //bottom bar color
-      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
+          .backgroundColor, //bottom bar color
+      //systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
     ));
     return ListaOdontoPlusServicos();
   }
