@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ContatoOne extends StatefulWidget {
+class ContatoTwo extends StatefulWidget {
+  final Widget precisaAjuda;
+
+  const ContatoTwo({Key key, this.precisaAjuda}) : super(key: key);
   @override
-  _ContatoOneState createState() => _ContatoOneState();
+  _ContatoTwoState createState() => _ContatoTwoState();
 }
 
-class _ContatoOneState extends State<ContatoOne> {
+class _ContatoTwoState extends State<ContatoTwo> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -14,58 +17,43 @@ class _ContatoOneState extends State<ContatoOne> {
         color: Theme.of(context).primaryColor,
         child: Stack(
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(40),
-              alignment: Alignment.centerLeft,
-              height: MediaQuery.of(context).size.height * 0.40,
-              width: double.infinity,
-              color: Theme.of(context).primaryColor,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Fale com a gente',
-                    style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700),
+            Column(
+              children: <Widget>[
+                SizedBox(height: 20,),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                    padding: EdgeInsets.all(1),
+                    height: 60,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15)
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset("assets/images/avatar3.jfif", fit: BoxFit.cover,),
+                    )
                   ),
-                  Text(
-                    'sempre que precisar!',
-                    style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Nosso atendimento está esperando sua mensagem ',
-                    style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    'ou ligação para te ajudar e passar informações.',
-                    style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700),
-                  )
-                ],
-              ),
+                ),
+                SizedBox(height: 15,),
+                Text('Maria Aparecida', style: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 16,
+                  color: Colors.white
+                ),)
+              ],
             ),
+//            Align(
+//              alignment: Alignment.topCenter,
+//              child: CircleAvatar(
+//                backgroundColor: Colors.transparent,
+//                backgroundImage: AssetImage("assets/images/avatar2.png"),
+//                radius: 70
+//              ),
+//            ),
             Container(
-              margin: EdgeInsets.only(top: 180),
+              margin: EdgeInsets.only(top: 140),
               height: 600,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -208,42 +196,34 @@ class _ContatoOneState extends State<ContatoOne> {
                   SizedBox(
                     height: 15,
                   ),
-                  //Facebook
+                  //Configurações
                   ListTile(
-                    leading: Image.asset(
-                      "assets/icons/facebook2.png",
-                      height: 30,
-                      width: 30,
+                    leading: Icon(Icons.filter_vintage,
+                        size: 30, color: Theme.of(context).primaryColor),
+                    trailing: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Color(0XFFD4D4D4),
+                        size: 15.64,
+                      ),
                     ),
                     title: Text(
-                      'Facebook',
+                      'Configurações',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 16,
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  //Instagram
-                  ListTile(
-                    leading: Image.asset(
-                      "assets/icons/instagram2.png",
-                      height: 30,
-                      width: 30,
-                    ),
-                    title: Text(
-                      'Instagram',
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
+                  )
                 ],
               ),
             ),
+//            Padding(
+//              padding: EdgeInsets.only(
+//                  top: 65, left: MediaQuery.of(context).size.width - 100),
+//              child: this.widget.precisaAjuda,
+//            )
           ],
         ),
       ),

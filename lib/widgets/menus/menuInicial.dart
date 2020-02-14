@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:odontoplus/main.dart';
 import 'package:odontoplus/pages/home/Servicos.dart';
 import 'package:odontoplus/widgets/buttons/buttonMenuInicialOne.dart';
+import 'package:odontoplus/widgets/precisaajudaApp.dart';
 import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusOne.dart';
 
 class menuInicial extends StatefulWidget {
@@ -146,7 +147,12 @@ class _menuInicialState extends State<menuInicial> {
                     color: Color(0XFF24A9A0),
                   ),
                   textoButton: 'Dados',
-                  onTap: () {},
+                  onTap: () {
+                    //Abrindo Tela de Dados
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return scaffOdontoPlusOne(pageDefault: 9, ehVisivel: false, precisaAjuda: precisaajudaApp(visivel: true,),);
+                    }));
+                  },
                 ),
                 SizedBox(
                   height: 15,
@@ -160,7 +166,9 @@ class _menuInicialState extends State<menuInicial> {
                     color: Color(0XFF24A9A0),
                   ),
                   textoButton: 'Convênios',
-                  onTap: () {},
+                  onTap: () {
+
+                  },
                 ),
               ],
             )

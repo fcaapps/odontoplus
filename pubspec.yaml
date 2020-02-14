@@ -71,6 +71,9 @@ flutter:
     - assets/icons/convenios.png
     - assets/icons/contato.png
     - assets/icons/instagram2.png
+    - assets/images/avatar.png
+    - assets/images/avatar2.png
+    - assets/images/avatar3.jfif
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
