@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
 class ContatoTwo extends StatefulWidget {
-  final Widget precisaAjuda;
-
-  const ContatoTwo({Key key, this.precisaAjuda}) : super(key: key);
   @override
   _ContatoTwoState createState() => _ContatoTwoState();
 }

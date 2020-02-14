@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:odontoplus/main.dart';
 import 'package:odontoplus/widgets/precisaajudaApp.dart';
 import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusOne.dart';
 import 'package:odontoplus/widgets/scaffolds/scaffOdontoPlusTwo.dart';
@@ -15,6 +16,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+
   Widget build(BuildContext context) {
 //    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
 //      statusBarColor: Theme.of(context).backgroundColor, //top bar color
@@ -32,11 +34,6 @@ class _HomePageState extends State<HomePage> {
         child: Stack(
           children: <Widget>[
             scaffOdontoPlusOne(pageDefault: 0,),
-            Padding(
-              padding: EdgeInsets.only(
-                  top: 130, left: MediaQuery.of(context).size.width - 100),
-              child: this.widget.precisaAjuda,
-            )
           ],
         ));
   }

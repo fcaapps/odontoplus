@@ -18,6 +18,6 @@ class _DadosState extends State<Dados> {
       Theme.of(context).backgroundColor, //bottom bar color
       systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
     ));
-    return ContatoTwo(precisaAjuda: precisaajudaApp(visivel: true,),);
+    return ContatoTwo();
   }
 }

@@ -62,7 +62,7 @@ class _menuInicialState extends State<menuInicial> {
                   onTap: () {
                     //Abrindo Tela de Serviços
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return scaffOdontoPlusOne(pageDefault: 5, ehVisivel: false,);
+                      return scaffOdontoPlusOne(pageDefault: 5, ehVisivel: false, ehVisivelPA: false,);
                     }));
                   },
                 ),
@@ -81,7 +81,7 @@ class _menuInicialState extends State<menuInicial> {
                   onTap: () {
                     //Abrindo Tela de Agendamento
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return scaffOdontoPlusOne(pageDefault: 6, ehVisivel: false,);
+                      return scaffOdontoPlusOne(pageDefault: 6, ehVisivel: false, ehVisivelPA: false,);
                     }));
                   },
                 ),
@@ -106,7 +106,7 @@ class _menuInicialState extends State<menuInicial> {
                   onTap: () {
                     //Abrindo Tela de Contato
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return scaffOdontoPlusOne(pageDefault: 7, ehVisivel: false,);
+                      return scaffOdontoPlusOne(pageDefault: 7, ehVisivel: false, ehVisivelPA: false,);
                     }));
                   },
                 ),
@@ -125,7 +125,7 @@ class _menuInicialState extends State<menuInicial> {
                   onTap: () {
                     //Abrindo Tela de Histórico
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return scaffOdontoPlusOne(pageDefault: 8, ehVisivel: false,);
+                      return scaffOdontoPlusOne(pageDefault: 8, ehVisivel: false, ehVisivelPA: false,);
                     }));
                   },
                 ),
@@ -150,7 +150,7 @@ class _menuInicialState extends State<menuInicial> {
                   onTap: () {
                     //Abrindo Tela de Dados
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return scaffOdontoPlusOne(pageDefault: 9, ehVisivel: false, precisaAjuda: precisaajudaApp(visivel: true,),);
+                      return scaffOdontoPlusOne(pageDefault: 9, ehVisivel: false, ehVisivelPA: true,);
                     }));
                   },
                 ),
@@ -169,7 +169,7 @@ class _menuInicialState extends State<menuInicial> {
                   onTap: () {
                     //Abrindo Tela de Convênios
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return scaffOdontoPlusOne(pageDefault: 10, ehVisivel: false);
+                      return scaffOdontoPlusOne(pageDefault: 10, ehVisivel: false, ehVisivelPA: false);
                     }));
                   },
                 ),

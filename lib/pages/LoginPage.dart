@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:odontoplus/main.dart';
 import 'package:odontoplus/pages/HomePage.dart';
 import 'package:odontoplus/widgets/buttons/buttonFacebookOne.dart';
 import 'package:odontoplus/widgets/buttons/buttonGoogleOne.dart';
@@ -78,7 +79,6 @@ class _LoginPageState extends State<LoginPage> {
 //                                  Brightness.dark, //bottom bar icons
 //                                ));
 //                          });
-
                           return HomePage(
                               precisaAjuda: precisaajudaApp(
                             visivel: true,
