@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ListaOdontoPlusHistorico extends StatefulWidget {
+class ListaOdontoPlusConvenios extends StatefulWidget {
   @override
-  _ListaOdontoPlusHistoricoState createState() => _ListaOdontoPlusHistoricoState();
+  _ListaOdontoPlusConveniosState createState() => _ListaOdontoPlusConveniosState();
 }
 
-class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
+class _ListaOdontoPlusConveniosState extends State<ListaOdontoPlusConvenios> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +24,7 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
               padding: const EdgeInsets.only(top: 20, bottom: 30),
               alignment: Alignment.center,
               child: Text(
-                'Histórico',
+                'Convênios',
                 style: TextStyle(
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
@@ -33,7 +33,18 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
               ),
             ),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -44,12 +55,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -60,12 +82,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -76,12 +109,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -92,12 +136,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -108,12 +163,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -124,12 +190,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -140,12 +217,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -156,12 +244,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -172,12 +271,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -188,12 +298,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -204,12 +325,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -220,12 +352,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -236,12 +379,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -252,12 +406,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -268,12 +433,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -284,12 +460,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -300,12 +487,23 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
             Divider(thickness: 3, indent: 15, endIndent: 15,),
             ListTile(
-              trailing: Text('07/09'),
+              leading: Container(
+                height: 52,
+                width: 52,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward_ios, size: 15,),
+              ),
               title: Text('Loren ipsum',
                   style: TextStyle(
                       fontFamily: 'Roboto',
@@ -316,12 +514,12 @@ class _ListaOdontoPlusHistoricoState extends State<ListaOdontoPlusHistorico> {
                   style: TextStyle(
                       fontFamily: 'Roboto',
                       fontWeight: FontWeight.w500,
-                      fontSize: 14,
+                      fontSize: 13,
                       color: Color(0XFF707070))),
             ),
           ],
         ),
       ),
-    );
+    );;
   }
 }

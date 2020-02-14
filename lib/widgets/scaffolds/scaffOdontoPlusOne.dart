@@ -8,6 +8,7 @@ import 'package:odontoplus/pages/drawer/ContatosPage.dart';
 import 'package:odontoplus/pages/drawer/PerfilPage.dart';
 import 'package:odontoplus/pages/home/Agendamento.dart';
 import 'package:odontoplus/pages/home/Contato.dart';
+import 'package:odontoplus/pages/home/Convenios.dart';
 import 'package:odontoplus/pages/home/Dados.dart';
 import 'package:odontoplus/pages/home/Historico.dart';
 import 'package:odontoplus/pages/home/Servicos.dart';
@@ -45,7 +46,8 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     Agendamento(),
     Contato(),
     Historico(),
-    Dados( )
+    Dados(),
+    Convenios()
   ];
 
   //Define cor fixa background appBar
@@ -62,7 +64,9 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
       return Theme.of(context).backgroundColor;
     } else if (this.widget.pageDefault == 9) {
       return Theme.of(context).primaryColor;
-    } else {
+    } else if (this.widget.pageDefault == 10) {
+      return Theme.of(context).primaryColor;
+    }else {
       return Theme.of(context).backgroundColor;
     }
   }
@@ -78,6 +82,8 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     } else if (this.widget.pageDefault == 8) {
       return Theme.of(context).backgroundColor;
     } else if (this.widget.pageDefault == 9) {
+      return Theme.of(context).backgroundColor;
+    } else if (this.widget.pageDefault == 10) {
       return Theme.of(context).backgroundColor;
     } else {
       return Theme.of(context).primaryColor;
@@ -95,6 +101,8 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     } else if (this.widget.pageDefault == 8) {
       return Theme.of(context).backgroundColor;
     } else if (this.widget.pageDefault == 9) {
+      return Theme.of(context).backgroundColor;
+    } else if (this.widget.pageDefault == 10) {
       return Theme.of(context).backgroundColor;
     } else {
       return Theme.of(context).primaryColor;
@@ -119,6 +127,10 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
           : Theme.of(context).backgroundColor;
     } else if (this.widget.pageDefault == 9) {
       return posPixelInicialPage < 205
+          ? Theme.of(context).primaryColor
+          : Theme.of(context).backgroundColor;
+    } else if (this.widget.pageDefault == 10) {
+      return posPixelInicialPage < 85
           ? Theme.of(context).primaryColor
           : Theme.of(context).backgroundColor;
     } else {
@@ -210,6 +222,22 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
         },
         icon: Icon(Icons.arrow_back),
       );
+    } else if (this.widget.pageDefault == 10) {
+      return IconButton(
+        onPressed: () {
+          SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+            statusBarColor: Theme.of(context).backgroundColor, //top bar color
+            //statusBarIconBrightness: Brightness.dark, //top bar icons
+            systemNavigationBarColor:
+            Theme.of(context).backgroundColor, //bottom bar color
+//            systemNavigationBarIconBrightness:
+//            Brightness.dark, //bottom bar icons
+          ));
+          Navigator.of(context).pop();
+          //Navigator.of(context).pop();
+        },
+        icon: Icon(Icons.arrow_back),
+      );
     } else {
       return null;
     }
@@ -226,7 +254,9 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
       return PageController(initialPage: 8);
     } else if (this.widget.pageDefault == 9) {
       return PageController(initialPage: 9);
-    }else {
+    } else if (this.widget.pageDefault == 10) {
+      return PageController(initialPage: 10);
+    } else {
       return PageController(initialPage: 0);
     }
   }
@@ -245,78 +275,83 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
 //      systemNavigationBarIconBrightness: Brightness.dark, //bottom bar icons
 //    ));
 
-    return Stack(
-      children: <Widget>[
-        Container(
-            height: MediaQuery.of(context).size.height / 4,
-            color: _corAppBarAposMovimento()),
-        Container(
-          margin:
-              EdgeInsets.only(top: MediaQuery.of(context).size.height - 150),
-          color: _corNavigationBar(),
-        ),
-        Scaffold(
-          key: _keyScaffold,
-          backgroundColor: Colors.transparent,
-          drawer: drawerOne(
-            onPressed: (index) {
-              _keyScaffold.currentState.openEndDrawer();
-              _pageControl.jumpToPage(index);
-            },
+    return Container(
+      color: Theme.of(context).backgroundColor,
+      child: Stack(
+        children: <Widget>[
+          Container(
+              height: MediaQuery.of(context).size.height / 4,
+              width: double.infinity,
+              color: _corAppBarAposMovimento()),
+          Container(
+            margin:
+                EdgeInsets.only(top: MediaQuery.of(context).size.height - 150),
+            color: _corNavigationBar(),
+            width: double.infinity,
           ),
-          appBar: PreferredSize(
-            preferredSize: Size.fromHeight(65),
-            child: AppBar(
-              leading: btnVoltar(),
-              automaticallyImplyLeading: false,
-              shape: ContinuousRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(100),
-                      bottomRight: Radius.circular(100))),
-              actions: <Widget>[
-                Visibility(
-                  child: IconButton(
-                      icon: new Icon(Icons.menu),
-                      onPressed: () {
-                        _keyScaffold.currentState.openDrawer();
-                      }),
-                  visible: this.widget.ehVisivel == null
-                      ? true
-                      : this.widget.ehVisivel,
-                ),
-              ],
-              iconTheme: IconThemeData(color: _corBtns()),
-              elevation: 0,
-              backgroundColor: _corAppBar(),
-              //Texto do Header
-              title: textoHeaderApp(
-                corTextoOdonto: _corBtns(),
-              ),
-              centerTitle: true,
-              //brightness: Brightness.dark,
+          Scaffold(
+            key: _keyScaffold,
+            backgroundColor: Colors.transparent,
+            drawer: drawerOne(
+              onPressed: (index) {
+                _keyScaffold.currentState.openEndDrawer();
+                _pageControl.jumpToPage(index);
+              },
             ),
-          ),
-          body: NotificationListener<ScrollUpdateNotification>(
-              child: PageView(
-                physics: NeverScrollableScrollPhysics(),
-                controller: _pageControl,
-                children: pages,
+            appBar: PreferredSize(
+              preferredSize: Size.fromHeight(65),
+              child: AppBar(
+                leading: btnVoltar(),
+                automaticallyImplyLeading: false,
+                shape: ContinuousRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(100),
+                        bottomRight: Radius.circular(100))),
+                actions: <Widget>[
+                  Visibility(
+                    child: IconButton(
+                        icon: new Icon(Icons.menu),
+                        onPressed: () {
+                          _keyScaffold.currentState.openDrawer();
+                        }),
+                    visible: this.widget.ehVisivel == null
+                        ? true
+                        : this.widget.ehVisivel,
+                  ),
+                ],
+                iconTheme: IconThemeData(color: _corBtns()),
+                elevation: 0,
+                backgroundColor: _corAppBar(),
+                //Texto do Header
+                title: textoHeaderApp(
+                  corTextoOdonto: _corBtns(),
+                ),
+                centerTitle: true,
+                //brightness: Brightness.dark,
               ),
-              onNotification: (notification) {
-                //print(notification.scrollDelta);
-                setState(() {
-                  posPixelInicialPage = notification.metrics.pixels.truncate();
-                  print(notification.metrics.pixels);
-                });
-              }),
-          bottomNavigationBar: bottomNavigationBar,
-        ),
-        Padding(
-          padding: EdgeInsets.only(
-              top: 130, left: MediaQuery.of(context).size.width - 100),
-          child: this.widget.precisaAjuda,
-        )
-      ],
+            ),
+            body: NotificationListener<ScrollUpdateNotification>(
+                child: PageView(
+                  physics: NeverScrollableScrollPhysics(),
+                  controller: _pageControl,
+                  children: pages,
+                ),
+                onNotification: (notification) {
+                  //print(notification.scrollDelta);
+                  setState(() {
+                    posPixelInicialPage = notification.metrics.pixels.truncate();
+                    print(notification.metrics.pixels);
+                  });
+                }),
+            bottomNavigationBar: bottomNavigationBar,
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+                top: 130, left: MediaQuery.of(context).size.width - 100),
+            child: this.widget.precisaAjuda,
+          )
+        ],
+      ),
     );
     ;
   }

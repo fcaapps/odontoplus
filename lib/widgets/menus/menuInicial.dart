@@ -167,7 +167,10 @@ class _menuInicialState extends State<menuInicial> {
                   ),
                   textoButton: 'Convênios',
                   onTap: () {
-
+                    //Abrindo Tela de Convênios
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return scaffOdontoPlusOne(pageDefault: 10, ehVisivel: false);
+                    }));
                   },
                 ),
               ],
