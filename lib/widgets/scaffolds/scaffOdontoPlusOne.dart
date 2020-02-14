@@ -90,6 +90,9 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
       if (index == 1) {
         indexPage = 1;
         return Theme.of(context).primaryColor;
+      } else if (index == 2) {
+        indexPage = 2;
+        return Theme.of(context).primaryColor;
       } else {
         return Theme.of(context).backgroundColor;
       }
@@ -113,7 +116,9 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
     } else {
       if (index == 1) {
         return Theme.of(context).backgroundColor;
-      } else {
+      } else if (index == 2) {
+        return Theme.of(context).backgroundColor;
+      }else {
         return Theme.of(context).primaryColor;
       }
     }
@@ -135,6 +140,8 @@ class _scaffOdontoPlusOneState extends State<scaffOdontoPlusOne> {
       return Theme.of(context).backgroundColor;
     } else {
       if (index == 1) {
+        return Theme.of(context).backgroundColor;
+      } else if (index == 2) {
         return Theme.of(context).backgroundColor;
       } else {
         return Theme.of(context).primaryColor;

@@ -40,45 +40,34 @@ class _AgendarPageState extends State<AgendarPage> {
                     fontSize: 16,
                     color: Color(0XFF707070)),
               ),
-            ),
-//            Container(
-//              padding: const EdgeInsets.all(20.0),
-//              child: TextFormField(
-//                decoration: InputDecoration(
-//                    border: InputBorder.none,
-//                    hintText: '09:00 | 10 de março',
-//                    hintStyle: TextStyle(
-//                        fontFamily: 'Roboto',
-//                        fontSize: 16,
-//                        fontWeight: FontWeight.bold,
-//                        color: Color(0XFF707070))),
-//              ),
-//            ),
+            ), //
             Container(
               height: 50,
               width: double.infinity,
               margin: const EdgeInsets.all(20.0),
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(width: 2.0, color: Color(0XFFD4D4D4) )
-                )
-              ),
+                  border: Border(
+                      bottom:
+                          BorderSide(width: 2.0, color: Color(0XFFD4D4D4)))),
               child: Row(
                 children: <Widget>[
-                  Text('9:00 AM',
-                  style: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 20,
-                    color: Color(0XFFF52E64),
-                    fontWeight: FontWeight.bold
-                  ),),
-                  Text(' | 10 de março',
+                  Text(
+                    '9:00 AM',
                     style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 20,
-                        color: Color(0XFF707070),
-                    ),)
+                        color: Color(0XFFF52E64),
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    ' | 10 de março',
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 20,
+                      color: Color(0XFF707070),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -97,9 +86,7 @@ class _AgendarPageState extends State<AgendarPage> {
               padding: const EdgeInsets.all(20),
               child: TextFormField(
                 maxLines: 6,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder()
-                ),
+                decoration: InputDecoration(border: OutlineInputBorder()),
               ),
             )
           ],
