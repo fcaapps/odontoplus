@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         top: true,
         child: Stack(
           children: <Widget>[
-            scaffOdontoPlusOne(pageDefault: 0,),
+            scaffOdontoPlusOne(),
           ],
         ));
   }

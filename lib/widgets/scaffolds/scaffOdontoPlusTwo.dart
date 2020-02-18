@@ -6,7 +6,6 @@ import 'package:odontoplus/pages/drawer/AgendarPage.dart';
 import 'package:odontoplus/pages/drawer/ConfigPage.dart';
 import 'package:odontoplus/pages/drawer/ContatosPage.dart';
 import 'package:odontoplus/pages/drawer/PerfilPage.dart';
-import 'package:odontoplus/pages/home/Servicos.dart';
 import 'package:odontoplus/widgets/bottomnavigations/botnavOdontoPlusOne.dart';
 import 'package:odontoplus/widgets/drawers/drawerOne.dart';
 import 'package:odontoplus/widgets/headers/textoHeaderApp.dart';

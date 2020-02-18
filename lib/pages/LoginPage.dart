@@ -55,30 +55,8 @@ class _LoginPageState extends State<LoginPage> {
                         setState(() {
                           isLoading = !isLoading;
                         });
-                        //Abrindo página HomePage
-                        setState(() {
-                          SystemChrome.setSystemUIOverlayStyle(
-                              SystemUiOverlayStyle(
-                                systemNavigationBarColor: Theme.of(context)
-                                    .backgroundColor, //top bar color
-                              ));
-                        });
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
-//                          setState(() {
-//                            SystemChrome.setSystemUIOverlayStyle(
-//                                SystemUiOverlayStyle(
-//                                  statusBarColor: Theme.of(context).backgroundColor,
-//                                  //top bar color
-//                                  statusBarIconBrightness: Brightness.dark,
-//                                  //top bar icons
-//                                  systemNavigationBarColor:
-//                                  Theme.of(context).backgroundColor,
-//                                  //bottom bar color
-//                                  systemNavigationBarIconBrightness:
-//                                  Brightness.dark, //bottom bar icons
-//                                ));
-//                          });
                           return HomePage(
                               precisaAjuda: precisaajudaApp(
                             visivel: true,

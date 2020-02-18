@@ -75,6 +75,12 @@ flutter:
     - assets/images/avatar2.png
     - assets/images/avatar3.jfif
     - assets/images/unimed.png
+    - assets/images/logo2.png
+    - assets/icons/home_drawer.png
+    - assets/icons/calendar_drawer.png
+    - assets/icons/perfil_drawer.png
+    - assets/icons/contatos_drawer.png
+    - assets/icons/config_drawer.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

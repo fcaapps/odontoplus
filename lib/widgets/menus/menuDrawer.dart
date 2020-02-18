@@ -16,77 +16,155 @@ class menuDrawer extends StatelessWidget {
                 onTap: () {
                   onPressed(0);
                 },
-                leading: Icon(
-                  Icons.home,
-                  size: 30,
+                leading: Image.asset(
+                  "assets/icons/home_drawer.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
                 ),
                 title: Text(
                   'PÁGINA INICIAL',
                   style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 15,
+                    fontSize: 12,
                   ),
                 )),
             ListTile(
                 onTap: () {
                   onPressed(1);
                 },
-                leading: Icon(
-                  Icons.calendar_today,
-                  size: 25,
+                leading: Image.asset(
+                  "assets/icons/contatos_drawer.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
                 ),
                 title: Text(
-                  'AGENDAR',
+                  'CONTATOS',
                   style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 15,
+                    fontSize: 12,
                   ),
                 )),
             ListTile(
                 onTap: () {
                   onPressed(2);
                 },
-                leading: Icon(
-                  Icons.build,
-                  size: 25,
+                leading: Image.asset(
+                  "assets/icons/perfil_drawer.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
                 ),
                 title: Text(
-                  'CONFIGURAÇÕES',
+                  'PERFIL',
                   style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 15,
+                    fontSize: 12,
                   ),
                 )),
             ListTile(
                 onTap: () {
                   onPressed(3);
                 },
-                leading: Icon(
-                  Icons.mail,
-                  size: 25,
+                leading: Image.asset(
+                  "assets/icons/servicos.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4)
                 ),
                 title: Text(
-                  'CONTATOS',
+                  'SERVIÇOS',
                   style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 15,
+                    fontSize: 12,
                   ),
                 )),
             ListTile(
                 onTap: () {
                   onPressed(4);
                 },
-                leading: Icon(
-                  Icons.person_pin,
-                  size: 25,
+                leading: Image.asset(
+                  "assets/icons/calendar_drawer.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
                 ),
                 title: Text(
-                  'PERFIL',
+                  'AGENDAR',
                   style: TextStyle(
                     fontFamily: 'Roboto',
-                    fontSize: 15,
+                    fontSize: 12,
                   ),
-                ))
+                )),
+            ListTile(
+                onTap: () {
+                  onPressed(5);
+                },
+                leading: Image.asset(
+                  "assets/icons/historico.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
+                ),
+                title: Text(
+                  'HISTÓRICO',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 12,
+                  ),
+                )),
+            ListTile(
+                onTap: () {
+                  onPressed(6);
+                },
+                leading: Image.asset(
+                  "assets/icons/dados.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
+                ),
+                title: Text(
+                  'DADOS',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 12,
+                  ),
+                )),
+            ListTile(
+                onTap: () {
+                  onPressed(7);
+                },
+                leading: Image.asset(
+                  "assets/icons/convenios.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
+                ),
+                title: Text(
+                  'CONVÊNIOS',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 12,
+                  ),
+                )),
+            ListTile(
+                onTap: () {
+                  onPressed(8);
+                },
+                leading: Image.asset(
+                  "assets/icons/config_drawer.png",
+                  height: 20,
+                  width: 20,
+                  color: Color(0XFFD4D4D4),
+                ),
+                title: Text(
+                  'CONFIGURAÇÕES',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 12,
+                  ),
+                )),
           ],
         ),
       ),

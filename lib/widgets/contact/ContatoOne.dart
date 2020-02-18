@@ -28,7 +28,7 @@ class _ContatoOneState extends State<ContatoOne> {
                     style: TextStyle(
                         fontFamily: 'Roboto',
                         color: Colors.white,
-                        fontSize: 16,
+                        fontSize: 20,
                         fontWeight: FontWeight.w700),
                   ),
                   Text(
@@ -36,31 +36,31 @@ class _ContatoOneState extends State<ContatoOne> {
                     style: TextStyle(
                         fontFamily: 'Roboto',
                         color: Colors.white,
-                        fontSize: 16,
+                        fontSize: 20,
                         fontWeight: FontWeight.w700),
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
-                    'Nosso atendimento está esperando sua mensagem ',
+                    'Nosso atendimento está esperando sua mensagem ou ligação para te ajudar e passar informações.',
                     style: TextStyle(
                         fontFamily: 'Roboto',
                         color: Colors.white,
-                        fontSize: 10,
+                        fontSize: 14,
                         fontWeight: FontWeight.w700),
                   ),
                   SizedBox(
                     height: 5,
                   ),
-                  Text(
-                    'ou ligação para te ajudar e passar informações.',
-                    style: TextStyle(
-                        fontFamily: 'Roboto',
-                        color: Colors.white,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w700),
-                  )
+//                  Text(
+//                    'ou ligação para te ajudar e passar informações.',
+//                    style: TextStyle(
+//                        fontFamily: 'Roboto',
+//                        color: Colors.white,
+//                        fontSize: 14,
+//                        fontWeight: FontWeight.w700),
+//                  )
                 ],
               ),
             ),
